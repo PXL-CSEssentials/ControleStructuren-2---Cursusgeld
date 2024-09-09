@@ -1,0 +1,22 @@
+﻿<Window x:Class="ControleStructuren_2___Cursusgeld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleStructuren_2___Cursusgeld"
+        mc:Ignorable="d"
+        Title="Cursusjaar - schrikkeljaar" Height="219" Width="462">
+    <Grid>
+        <Label Content="Jaar:" HorizontalAlignment="Left" Margin="96,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Aantal lesuren:" HorizontalAlignment="Left" Margin="41,58,0,0" VerticalAlignment="Top"/>
+        <Label Content="Inschrijvingsgeld:" HorizontalAlignment="Left" Margin="28,93,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="numericButton" Content="Test _numeriek" HorizontalAlignment="Left" Margin="24,135,0,0" VerticalAlignment="Top" Width="130" Click="numericButton_Click" Height="45" FontWeight="Bold"/>
+        <Button x:Name="calculateButton" Content="_Berekenen" HorizontalAlignment="Left" Margin="188,135,0,0" VerticalAlignment="Top" Width="106" Click="calculateButton_Click" Height="45" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="closeButton" Content="_Afsluiten" HorizontalAlignment="Left" Margin="344,135,0,0" VerticalAlignment="Top" Width="104" Click="closeButton_Click" Height="45" FontWeight="Bold"/>
+        <TextBox x:Name="yearTextBox" HorizontalAlignment="Left" Height="22" Margin="164,24,0,0" TextWrapping="Wrap" Text="2020" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="numberOfClassHoursTextBox" HorizontalAlignment="Left" Height="23" Margin="164,59,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="subscriptionFeeTextBox" HorizontalAlignment="Left" Height="23" Margin="164,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="numericLabel" HorizontalAlignment="Left" Height="34" Margin="302,18,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label x:Name="leapYearLabel"  HorizontalAlignment="Left" Height="31" Margin="302,58,0,0" VerticalAlignment="Top" Width="146"/>
+    </Grid>
+</Window>
