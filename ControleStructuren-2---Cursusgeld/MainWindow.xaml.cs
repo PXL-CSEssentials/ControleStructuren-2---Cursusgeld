@@ -54,7 +54,7 @@ namespace ControleStructuren_2___Cursusgeld
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
-            const float pricePerCredit = 1.5f;
+            const float PricePerCredit = 1.5f;
             int numberOfClassHours = int.Parse(numberOfClassHoursTextBox.Text);
 
             // Opnieuw het jaar opvragen omdat het gewijzigd kan zijn.      
@@ -73,14 +73,14 @@ namespace ControleStructuren_2___Cursusgeld
                 {
                     leapYearLabel.Content = "Is een schrikkeljaar";
                     // Schrikkeljaar, dus 8 extra studiepunten
-                    float subscriptionFee = ((numberOfClassHours + 1) * pricePerCredit);
+                    float subscriptionFee = ((numberOfClassHours + 1) * PricePerCredit);
                     subscriptionFeeTextBox.Text = subscriptionFee.ToString();
                 }
                 else
                 {
                     leapYearLabel.Content = "Is geen schrikkeljaar";
                     // Geen schrikkeljaar, dus geen extra studiepunten
-                    subscriptionFeeTextBox.Text = (numberOfClassHours * pricePerCredit).ToString();
+                    subscriptionFeeTextBox.Text = (numberOfClassHours * PricePerCredit).ToString();
                 }
             }
 
