@@ -21,7 +21,7 @@ namespace ControleStructuren_2___Cursusgeld
     public partial class MainWindow : Window
     {
         // Zet variabelen hier als je die nodig hebt over meerdere functies
-        private int year;
+        private int _year;
 
         public MainWindow()
         {
@@ -33,7 +33,7 @@ namespace ControleStructuren_2___Cursusgeld
             // Resultaat wordt geschreven in jaar variabele.
             // TryParse geeft een bool terug (true als het de tekst kan omzetten naarint, 
             // false als dit niet gaat)
-            bool isNumeric = int.TryParse(yearTextBox.Text, out year);
+            bool isNumeric = int.TryParse(yearTextBox.Text, out _year);
 
 
             if (isNumeric)
@@ -58,7 +58,7 @@ namespace ControleStructuren_2___Cursusgeld
             int numberOfClassHours = int.Parse(numberOfClassHoursTextBox.Text);
 
             // Opnieuw het jaar opvragen omdat het gewijzigd kan zijn.      
-            bool isNumeric = int.TryParse(yearTextBox.Text, out year);
+            bool isNumeric = int.TryParse(yearTextBox.Text, out _year);
 
             // Schrikkeljaar: jaar dat deelbaar is door 4 en geen vol eeuwjaar, 
             // of als het een eeuwjaar is dan moet het deelbaar zijn door 400.     
@@ -69,7 +69,7 @@ namespace ControleStructuren_2___Cursusgeld
                 // Test op schrikkeljaar     
                 // * Jaar deelbaar door 4 EN geen eeuwjaar (niet deelbaar door honderd)
                 // * OF een jaar is deelbaar door 400
-                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+                if ((_year % 4 == 0 && _year % 100 != 0) || (_year % 400 == 0))
                 {
                     leapYearLabel.Content = "Is een schrikkeljaar";
                     // Schrikkeljaar, dus 8 extra studiepunten
